@@ -24,10 +24,10 @@ if (empty ($_POST['nombre_tienda']))
 }
 
  // Procesa el botón de radio
-if (isset($_POST['Tipo'])) {
+if (empty ($_POST['Tipo'])) {
     $selected_option = $_POST['Tipo'];
 
-	echo "<br>Campo nombre de la tienda obligatorio";
+	echo "<br>Campo Tipo obligatorio";
     $bandera=0;
 }
 
