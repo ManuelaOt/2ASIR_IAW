@@ -1,59 +1,71 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>Alta Clientes</title>
-  <meta charset="utf-8">
-    
-</head>
-	<body>
-		<div class="container">
-
-		<h1>Registro</h1>
-			<form name="usuario" action="procesa_form.php" method="POST">
-			<fieldset>
-			<legend>Introduzca sus datos</legend></br>	
-				<div>
-					<label for="dni">DNI:</label><br>
-						<input type="tel" name="DNI" size="9" maxlength="12" required placeholder="48759952X"
-							pattern="[0-9]{8}[A-Z]{1}" id="dni" /> 
-				</div><BR>
-  			 
-				<div>
-            		<label for="nombre"> Nombre:</label><br>
-                            <input type="text" name="nombre" id="nombre" size="30" maxlength="35" required />
-				</div><BR>
-
-				<div>
-					<label for="apellido"> Apellido:</label><br>
-								<input type="text" name="apellido" id="apellido" size="30" maxlength="35" required />
-					</div><BR>
-				
-				<div>
-					<label>Tipo</label></br>
-  								<input type="radio"  name="Tipo" value="Mayorista">Mayorista</input></br>
-  								<input type="radio"  name="Tipo" value="Minorista">Minorista</input></br>
-				</div><br>
-				
-				<div>
-            		<label for="email">email</label><BR>
-					<input type="email" name="email" id="email" size="30" maxlength="35" required /> 
-				</div><BR>		
-					
-				<div>
-            		<label for="tlf">Telefono:</label><br>
-                        <input type="tel" name="telefono" size="9" maxlength="12" required placeholder="123456789"
-                        pattern="[0-9]{9}" id="tlf" /> 
-				</div><BR>
-				
+<?php 
+//Conectamos con la base de datos
+include('conecta.php');
+ //Comprobamos si los campos obligatorios estan vacios
+ //Cuando bandera=1 Se permite la inserción en la base de datos, cuando es bandera=0 no se permite
+ $bandera=1; 
+ //Comprobando si los campos estan vacios o no
+if (empty ($_POST['DNI']))
+{
+    echo "<br>Campo nombre obligatorio";
+    $bandera=0;
+}
  
-			<input type="submit" name="enviar" id="enviar" class="btn btn-default" value="Insertar usuario">
-			
-			</div>
-			</fieldset>
+if (empty ($_POST['nombre']))
+{
+    echo "<br>Campo nombre obligatorio";
+    $bandera=0;
+}
 
-			</form>
-	
-			</div>
-				
-	</body>
-</html>
+if (empty ($_POST['nombre_tienda']))
+{
+    echo "<br>Campo nombre de la tienda obligatorio";
+    $bandera=0;
+}
+
+ // Procesa el botón de radio
+if (isset($_POST['Tipo'])) {
+    $selected_option = $_POST['Tipo'];
+
+	echo "<br>Campo nombre de la tienda obligatorio";
+    $bandera=0;
+}
+
+if (empty ($_POST['email']))
+{
+    echo "<br>Campo email obligatorio";
+    $bandera=0;
+}
+
+if (empty ($_POST['telefono']))
+{
+    echo "<br>Campo telefono obligatorio";
+    $bandera=0;
+}
+
+
+// Si bandera=1, usamos el php de conexion con la base de datos
+if ($bandera==1){
+    include('conecta.php');
+// Los values son los del formulario de usuario
+    $sql ="INSERT INTO Vendedores (DNI, Nombre, Nombre_tienda, Tipo, email, Telefono) VALUES ('".$_POST['DNI']."','".$_POST['nombre']."','".$_POST['nombre_tienda']."','".$_POST['Tipo']."','".$_POST['email']."','".$_POST['telefono']."')";
+
+   $insertar=mysqli_query($conn,$sql);
+   
+// comprobar si inserta o no en la tabla de turno 
+   if ($insertar) {
+    echo "New record created successfully";
+    echo "<a href='../index.html'> Volver al formulario </a>";
+   } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+   }
+// cierro la conexion a la base de datos 
+mysqli_close($conn);
+}
+else {
+
+    echo "<a href='../index.html'> Volver al formulario </a>";
+
+
+}
+?>

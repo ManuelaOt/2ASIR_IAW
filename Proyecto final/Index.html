@@ -53,25 +53,25 @@
 <br>
 
 <!--prueba formulario-->
-  <form name="usuario" action="procesa_form.php" method="POST">
+  <form name="Vendedores" action="./php/AltaClientes.php" method="POST">
       <div class="d-flex justify-content-center">
       <fieldset>
       <legend>Introduzca sus datos para vender con nosotros</legend>
     <label for="dni">DNI:</label>
       <br>
-    <input type="tel" name="DNI" size="9" maxlength="12" required placeholder="48759952X" pattern="[0-9]{8}[A-Z]{1}" id="dni" />      
+    <input type="tel" name="DNI" size="9" maxlength="12" required placeholder="123456789X" pattern="[0-9]{8}[A-Z]{1}" id="dni" />      
       <BR> 
     <label for="nombre"> Nombre:</label>
       <br>
     <input type="text" name="nombre" id="nombre" size="30" maxlength="35" required />
       <BR>
-    <label for="apellido">Nombre de la tienda:</label>
+    <label for="nombre_tienda">Nombre de la tienda:</label>
       <br>
-    <input type="text" name="apellido" id="apellido" size="30" maxlength="35" required />
+    <input type="text" name="nombre_tienda" id="apellido" size="30" maxlength="35" required />
       <BR>
     <label>Tipo</label>
       </br>
-    <input type="radio"  name="Tipo" value="Mayorista" >Hogar</input>
+    <input type="radio"  name="Tipo" value="Mayorista" >Cocina</input>
       </br>
     <input type="radio"  name="Tipo" value="Minorista">Electrónica</input>
       </br> 
