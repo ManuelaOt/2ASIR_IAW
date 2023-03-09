@@ -47,6 +47,26 @@ if ($bandera==1){
    } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
    }
+
+//Mostrar tabla de productos
+
+$id_vend = $_POST['id_vendedor'];
+$consulta = "SELECT * FROM Productos WHERE id_vendedor = '$id_vend'";
+$resultado = mysqli_query($conexion, $consulta);
+
+// Almacenar los resultados en un array
+$resultados = [];
+while ($fila = mysqli_fetch_assoc($resultado)) {
+    $resultados[] = $fila;
+}
+
+// Generar el código HTML para mostrar los resultados
+echo "<ul>";
+foreach ($resultados as $resultado) {
+    echo "<li>" . $resultado['campo'] . "</li>";
+}
+echo "</ul>";
+
 // cierro la conexion a la base de datos 
 mysqli_close($conn);
 }
