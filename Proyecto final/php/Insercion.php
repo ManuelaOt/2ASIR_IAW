@@ -43,16 +43,16 @@ if ($bandera==1){
 // comprobar si inserta o no en la tabla de turno 
    if ($insertar) {
     echo "New record created successfully";
-    echo "<a href='../index.html'> Volver al formulario </a>";
+    echo "<a href='../cliente1.html'> Volver al formulario </a>";
    } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
    }
 
-//Mostrar tabla de productos
+//Mostrar tabla de Insercion
 
 $id_vend = $_POST['id_vendedor'];
-$consulta = "SELECT * FROM Productos WHERE id_vendedor = '$id_vend'";
-$resultado = mysqli_query($conexion, $consulta);
+$sql = "SELECT * FROM Productos WHERE id_vendedor = '$id_vend'";
+$resultado = mysqli_query($conn, $sql);
 
 // Almacenar los resultados en un array
 $resultados = [];
@@ -62,8 +62,10 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
 
 // Generar el código HTML para mostrar los resultados
 echo "<ul>";
+echo "Lista de vendedores";
 foreach ($resultados as $resultado) {
-    echo "<li>" . $resultado['campo'] . "</li>";
+
+    echo "<li>" . $resultado['Id_producto'] . " " . $resultado['id_vendedor'] . " " . $resultado['Nombre_producto'] . " " .$resultado['precio'] . " " . $resultado['descripcion'] . "</li>";
 }
 echo "</ul>";
 
@@ -72,7 +74,7 @@ mysqli_close($conn);
 }
 else {
 
-    echo "<a href='../index.html'> Volver al formulario </a>";
+    echo "<a href='../cliente1.html'> Volver al formulario </a>";
 
 
 }

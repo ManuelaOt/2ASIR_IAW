@@ -62,9 +62,9 @@ if ($bandera==1){
 
 //Mostrar tabla de vendedores
 
-$id_vend = $_POST['id_vendedor'];
-$consulta = "SELECT * FROM Vendedores";
-$resultado = mysqli_query($conexion, $consulta);
+#$id_vend = $_POST['id_vendedor'];
+$sql = "SELECT * FROM Vendedores";
+$resultado = mysqli_query($conn, $sql);
 
 // Almacenar los resultados en un array
 $resultados = [];
@@ -74,8 +74,9 @@ while ($fila = mysqli_fetch_assoc($resultado)) {
 
 // Generar el código HTML para mostrar los resultados
 echo "<ul>";
+echo "Lista de vendedores";
 foreach ($resultados as $resultado) {
-    echo "<li>" . $resultado['campo'] . "</li>";
+    echo "<li>" . $resultado['DNI'] . " " . $resultado['Nombre'] . " " . $resultado['Nombre_tienda'] . " " . $resultado['Tipo'] . " " . $resultado['email'] . " " . $resultado['telefono'] .  "</li>";
 }
 echo "</ul>";
 
