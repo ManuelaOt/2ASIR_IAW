@@ -26,8 +26,35 @@
             </div>
             </div>
         </nav>
-
-    <!--grid imágenes catálogo-->
+    
+    <!--prueba formulario-->
+  <form name="insercion" action="./php/Insercion.php" method="POST">
+    <div class="d-flex justify-content-center">
+    <fieldset>
+    <legend>Comience a introducir sus artículos</legend><br>
+    <label for="id_vendedor">DNI vendedor:</label>
+      <br>
+    <input type="text" name="id_vendedor" size="9" maxlength="12" required placeholder="123456789X" pattern="[0-9]{8}[A-Z]{1}" id="id_vendedor" />
+      <br>  
+    <label for="nombre_producto">Nombre del producto</label>
+      <br>
+    <input type="" name="nombre_producto" size="30" maxlength="30" required id="nombre_producto" />      
+      <BR> 
+  <label for="precio"> Precio (€):</label>
+      <br>
+  <input type="number" name="precio" id="precio" size="15" maxlength="15" placeholder="999.99" required />
+      <BR>
+  <label for="descripcion">Descripción:</label>
+      <br>
+  <input type="text" name="descripcion" id="descripcion" style="width:500px;height:200px" maxlength="100" required />
+    <BR>
+    <BR>      
+  <input type="submit" name="enviar" id="enviar" class="btn btn-secondary btn-lg" value="Añadir producto">
+  <BR>  
+</fieldset>
+  </div>
+</form>
+  <BR> 
 
     
     
