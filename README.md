@@ -23,13 +23,13 @@ La tienda venderá su artesanía en línea y permitirá que los clientes creen s
 
 ## [2- Desarrollo](./Desarrollo.md)
 
-### [2.1- Estructura de la base de datos](./Desarrollo.md)
+### 2.1- Estructura de la base de datos
 
-### [2.2- Diseño Web](./Desarrollo.md)
+### 2.2- Diseño Web
 
-### [2.3- Securización](./Desarrollo.md)
+### 2.3- Securización
 
-### [2.4- Escalabilidad](./Desarrollo.md)
+### 2.4- Escalabilidad
 
 ## [3- Presupuesto](./Presupuesto.md)
 
