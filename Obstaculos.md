@@ -1,0 +1,3 @@
+## 4- Obstáculos
+El problema que se plantea con el enunciado citado arriba permite múltiples aproximaciones y soluciones, yo solo he encarado una de ellas.
+El principal inconveniente que he afrontado es el manejo tan básico que como Administradora de Sistemas en los programas propios del desarrollo Web como PHP o HTML. Aunque herramientas como bootstrap facilitan la tarea, el resultado final queda muy lejos de algo profesional. Sin embargo, sí que es perfectamente funcional; la base de datos está bien construida y permite ampliaciones, las máquinas están bien aprovisionadas y securizadas, los servicios funcionan perfectamente.

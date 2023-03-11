@@ -1,0 +1,4 @@
+## 3- Presupuesto
+Con fines educativos, hemos estado usando el LearningLab que proporciona Amazon Web Service y sus servicios de la capa gratuíta. Los precios generales se pueden consultar [aquí](https://aws.amazon.com/es/pricing/?aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all). Presento aquí un resumen del consumo de la capa gratuíta según Amazon:
+
+En un caso real, habría que analizar con el cliente los requiermientos para cubrir sus necesidades y crear los presupuestos con las herramientas de la web anterior. A esto habría que sumar nuestros servicios como profesionales que dependerán de si somos trabajadores de una empresa que proporciona estos servicios con sus cuotas o si somos nosotros los propietarios de esa empresa como socios o autónomos

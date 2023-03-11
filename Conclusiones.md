@@ -1,0 +1,4 @@
+## 5- Conclusiones
+Amazon Web Service proporciona un entorno de trabajo independiente de las características de hardware de los equipos de los alumnos a la hora de desplegar máquinas. Además proporciona la seguridad y la alta disponibilidad de un gigante como Amazon respaldando las granjas de servidores. 
+Trabajar en la nube, una vez que te haces a los conceptos, no es muy diferente de hacerlo en máquinas locales. Al final son entornos Linux en los que yo me siento cómoda y me muevo con seguridad. 
+Para el nivel que tenemos, el despliegue aquí montado nos permite acercarnos al mundo real y ver cómo se trabajaría en un sitio que manejen su propio sitio web o que tengan o pretendan contratar los servicios de la nube de Amazon. 
